@@ -20,7 +20,7 @@ const isAuth = async(req,res,next) =>{
 
     //Check for User
     if(!user) {
-        return res.status(401).send({msg :'authorization denied'})
+        return res.status(401).send({msg :'authorization deniedddddd'})
     };
     req.user = user 
 

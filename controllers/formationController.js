@@ -4,9 +4,9 @@ const jwt=require("jsonwebtoken")
 const User=require("../models/User")
 module.exports={
     createFormation:async (req,res)=>{
-        try{
-        const newFormation=new Formation({
-            userId:req.userId //GestionnaireId
+    try{
+        const newFormation = new Formation({
+            userId:req.userId
             ,...req.body
         })
      const formation= await  newFormation.save()

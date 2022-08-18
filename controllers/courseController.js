@@ -5,17 +5,17 @@ const User=require("../models/User");
 module.exports={
     createCourse:async (req,res)=>{
         try{
-            const newCourse=new Course({
-               
+            const newCourse = new Course({
                 userId:req.userId
-                ,...req.body})
-     const course= await newCourse.save()
-    
-      res.json({msg:"course created",course})
-    } catch (error) {
-        res.status(500).send("server error")
-    }
-    },
+                ,...req.body
+            })
+         const course= await newCourse.save()
+        
+          res.json({msg:"course created",course})
+        } catch (error) {
+            res.status(500).send("server error")
+        }
+        },
 
     
     getCourse:async (req,res)=>{

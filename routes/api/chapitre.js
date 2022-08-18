@@ -14,18 +14,16 @@ const User = require("../../models/User");
 //@path :http://localhost:5000/api/chapitres/newChapitre
 //Create new Chapitre
 //accés private
-// router.post('/newChapitre',isAuth,chapitreController.createChapitre);
-router.post('/newChapitre',chapitreController.createChapitre);
+router.post('/newChapitre',isAuth,chapitreController.createChapitre);
  
 
   //@path :http://localhost:5000/api/chapitres/
 //Get all Chapitres
 //accés private
-// router.get('/',isAuth,chapitreController.getChapitre)
-router.get('/',chapitreController.getChapitre)
-// router.get('/',chapitreController.getChapitre)
- 
-    //@path :http://localhost:5000/api/chapitres/deleteChapitres/:id
+router.get('/',isAuth,chapitreController.getChapitre);
+
+
+    //@path :http://localhost:5000/api/chapitres/deleteChapitre/:id
 // Delete Chapitre
 //accés private
 router.delete('/deleteChapitre/:id',isAuth,chapitreController.deleteChapitre);
@@ -34,6 +32,7 @@ router.delete('/deleteChapitre/:id',isAuth,chapitreController.deleteChapitre);
 //Edit Chapitre
 //accés priate
 router.put('/editChapitre/:id',isAuth,chapitreController.editChapitre);
+
  
 
 

@@ -21,12 +21,12 @@ const FormationSchema = new mongoose.Schema({
   numberOfCourses: {
     type: Number,
     required: true,
-  },
+  },/*
   instructor: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Formateur", //to check
     default: "60c1f7953d85d19ae170ef86",
-  },
+  },*/
   image: {
     type: String,
     default: "5f59da118313c69b8873ae904e11d4a9.png",

@@ -1,11 +1,11 @@
 //require express
-const express = require('express')
+const express =require('express')
 
 //Require ConnectDB
 const connectDB = require('./config/connectDB')
 
 //Require Router
-const userRoutes = require('./routes/api/userRoutes');
+const userRoutes =require('./routes/api/userRoutes');
 const profile = require('./routes/api/profile');
 const adminRoutes = require("./routes/api/adminRoutes");
 const course = require("./routes/api/course");
@@ -27,14 +27,14 @@ app.use('/api/profiles',profile);
 app.use('/api/admin',adminRoutes);
 
 app.use('/api/courses',course);
-app.use('/api/chapitres',chapitre);
+//app.use('/api/chapitres',chapitre);
 // app.use('/api/chapitres',isAuth,chapitre);
 app.use('/api/chapitres',chapitre);
 app.use('/api/formations',formation);
 
 
 //Create Port 
-const port = 6000
+const port = 5000;
 
 //Launch server
 app.listen(port , (error)=>

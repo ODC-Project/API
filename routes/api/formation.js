@@ -17,6 +17,7 @@ const User = require("../../models/User");
 //Create new Formation
 //accés private
 router.post('/newFormation',isAuth,formationController.createFormation);
+
  
 
   //@path :http://localhost:5000/api/formations/
