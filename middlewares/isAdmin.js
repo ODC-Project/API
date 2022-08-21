@@ -2,7 +2,7 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 
 const isAdmin = async (req, res, next) => {
-  const token = req.headers['x-auth-token'];
+  const token = req.headers['x-auth'];
 
   if (!token) {
     return res.status(401).json({ msg: "unauthorized" });

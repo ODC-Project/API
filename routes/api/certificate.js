@@ -34,6 +34,6 @@ router.put('/editCertif/:id',isAuth,certificateController.editCertificate);
     //@path :http://localhost:5000/api/certificates/deleteCertif/:id
 // Delete Certificates
 //accés private
-router.delete('/deleteCertificate/:id',isAuth,certificateController.deleteCertificate);
+router.delete('/deleteCertif/:id',isAuth,certificateController.deleteCertificate);
 
 module.exports = router;

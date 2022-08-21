@@ -29,6 +29,8 @@ app.use('/api/gestionnaires',adminRoutes);
 app.use('/api/Formateurs/',adminRoutes);
 app.use('/api/Students',adminRoutes);
 app.use('/api/Admins',adminRoutes);
+//app.use('/api/users',adminRoutes);
+
 
 
 app.use('/api/courses',course);

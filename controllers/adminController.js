@@ -25,9 +25,41 @@ const getAdmins = async (req, res) => {
     });
   }
 };
+/*
 
-// /api/admin/73857873578573
-/*const updateAdmin = async (req, res) => {
+const getAdmins = async (req, res) => {
+  // business logic and database query or fetching
+  try {
+    // step one : to retreive data from collection and we put it inside variable
+    // const adminsArray = await User.find() // to get all data collection
+    const adminsArray = await User.find({ role: "Admin", isDeleted: false }); //.select("-password") // to get all data collection
+    // step two : send the result into the response api
+    res.status(200).json({
+      data: adminsArray,
+      count: adminsArray.length,
+    });
+    // boom done !
+  } catch (error) {
+    console.log(error);
+    // in case we have an error
+    res.status(400).json({
+      error,
+    });
+  }
+};*/
+
+/*    getUsers:async(req,res)=>{
+        try {
+            
+            let users= (await User.find(Admin).select("-password"))
+            res.json({msg:"list users loaded",users})
+        } catch (error) {
+            res.status(500).send("server error")
+        }
+    }
+}*/
+/*
+const updateAdmin = async (req, res) => {
   try {
     const id = req.params.id; // number or mongo id
     const newAdminInfo = req.body; // {}
@@ -66,7 +98,7 @@ const deleteAdmin = async(req, res) => {
 const getGestionnaire = async (req, res) => {
     //console.log("hey")
     try {
-        const GestionnaireArray = await User.find({role: "Gestionnaire", isDeleted: false})//.select("-password") // to get all data collection
+        const GestionnaireArray = await User.find({role:"Gestionnaire", isDeleted: false})//.select("-password") // to get all data collection
         res.status(200).json({
             data : GestionnaireArray,
             count: GestionnaireArray.length
@@ -117,7 +149,7 @@ const deleteGestionnaire = async(req, res) => {
 
 const getFormateur = async (req, res) => {
   try {
-      const FormateurArray = await User.find({role: "Formateur", isDeleted: false})
+      const FormateurArray = await User.find({role:"Formateur", isDeleted: false})
       res.status(200).json({
           data : FormateurArray,
           count : FormateurArray.length
@@ -209,8 +241,7 @@ const deleteStudent = async(req, res) => {
 module.exports = {
 
     getAdmins,
-    updateAdmin,
-    deleteAdmin,
+   
     getFormateur,
     updateFormateur,
     deleteFormateur,

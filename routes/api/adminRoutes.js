@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 // const User=require("../../models/User");
-const adminController =require("../../controllers/adminController");
+const adminController = require("../../controllers/adminController");
 const isAuth = require("../../middlewares/isAuth");
 const isAdmin = require("../../middlewares/isAdmin");
 
@@ -9,6 +9,9 @@ const isAdmin = require("../../middlewares/isAdmin");
 // get all Admins
 
 router.get("/",isAuth,isAdmin,adminController.getAdmins);
+
+
+
 
 // router.get("/",isAuth, adminController.getAdmins)
 //.patch("/updateAdmin/:id", isAuth, adminController.updateAdmin)

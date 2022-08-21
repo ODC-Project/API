@@ -2,7 +2,9 @@ const express=require("express")
 const router=express.Router();
 const authController=require("../../controllers/authController");
 const isAuth = require("../../middlewares/isAuth");
-const {registerRules,validator,loginRules}=require("../../middlewares/validator")
+const {registerRules,validator,loginRules}=require("../../middlewares/validator");
+const isAdmin= require("../../middlewares/isAdmin");
+
 
 //@path  http://localhost:5000/api/users/registre
 //metode post registre user
@@ -22,6 +24,13 @@ router.post('/login',loginRules(),validator, authController.login)
 //get authentified user
 //@accés private
     router.get('/authUser',isAuth,authController.getAuthUser)
+
+
+// path: http://localhost:5000/api/users/
+// get all users
+
+router.get("/",isAuth,isAdmin,authController.getUsers);
+
     
        
 

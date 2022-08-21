@@ -2,6 +2,7 @@ const Certificate=require("../models/Certificate");
 const jwt=require("jsonwebtoken");
 
 const User=require("../models/User");
+const Course=require("../models/Course");
 module.exports={
     createCertificate:async (req,res)=>{
         try{
@@ -21,7 +22,7 @@ module.exports={
     getCertificate:async (req,res)=>{
 
 try {
-            const certificates=await Certificate.find().populate("userId").populate("courseId")
+            const certificates=await Certificate.find()
             res.json({certificates})
         } catch (error) {
             

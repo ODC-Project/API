@@ -87,4 +87,23 @@ module.exports = {
   getAuthUser: (req, res) => {
     res.json({ user: req.user });
   },
+
+
+ getUsers : async (req, res) => {
+  // business logic and database query or fetching
+  try {
+    // step one : to retreive data from collection and we put it inside variable
+    const users = (await User.find().select("-password"))// to get all data collection
+    //["Admin", "Formateur", "Gestionnaire", "Student"],
+    // step two : send the result into the response api
+    res.json({msg:"list users loaded",users})
+    // boom done !
+  } catch (error) {
+    console.log(error);
+    // in case we have an error
+    res.status(400).json({
+      errorrrrrr,
+    });
+  }
+}
 };
