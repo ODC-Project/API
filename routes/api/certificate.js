@@ -35,3 +35,5 @@ router.put('/editCertif/:id',isAuth,certificateController.editCertificate);
 // Delete Certificates
 //accés private
 router.delete('/deleteCertificate/:id',isAuth,certificateController.deleteCertificate);
+
+module.exports = router;

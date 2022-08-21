@@ -21,7 +21,7 @@ module.exports={
     getCertificate:async (req,res)=>{
 
 try {
-            const certificates=await Certificate.find().populate("userId")
+            const certificates=await Certificate.find().populate("userId").populate("courseId")
             res.json({certificates})
         } catch (error) {
             

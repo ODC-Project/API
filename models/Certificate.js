@@ -10,6 +10,15 @@ const CertificateSchema = new mongoose.Schema({
     ref: "Course",
     required: false, //true
   },
+  description:{
+    type:String,
+    required:true,
+  },
+  
+    name:{
+      type:String,
+      
+    },
 });
 let Certificate = mongoose.model("Certificate", CertificateSchema);
 module.exports = Certificate;
