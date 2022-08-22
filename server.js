@@ -40,8 +40,6 @@ app.use('/api/chapitres',chapitre);
 app.use('/api/formations',formation);
 app.use('/api/certificates',certificate);
 
-
-
 //Create Port 
 const port = 5000
 

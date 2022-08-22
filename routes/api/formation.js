@@ -24,8 +24,9 @@ router.post('/newFormation',isAuth,formationController.createFormation);
 //Get all formations
 //accés private
 router.get('/',isAuth,formationController.getFormation)
+
  
-    //@path :http://localhost:5000/api/formations/deleteFormations/:id
+   //@path :http://localhost:5000/api/formations/deleteFormation/:id
 // Delete formation
 //accés private
 router.delete('/deleteFormation/:id',isAuth,formationController.deleteFormation);

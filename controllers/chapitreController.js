@@ -22,7 +22,7 @@ module.exports={
     getChapitre:async (req,res)=>{
 
         try {
-            const chapitres = await Chapitre.find().populate("userId")
+            const chapitres = await Chapitre.find()
             res.json({chapitres})
         } catch (error) {
             
