@@ -18,8 +18,6 @@ const User = require("../../models/User");
 //accés private
 router.post('/newFormation',isAuth,formationController.createFormation);
 
- 
-
   //@path :http://localhost:5000/api/formations/
 //Get all formations
 //accés private
