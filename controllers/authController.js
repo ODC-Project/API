@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const Message = require("../../models/Message");
 module.exports = {
   register: async (req, res) => {
     const { name, lastName, email, password, role } = req.body;
@@ -105,5 +106,29 @@ module.exports = {
       errorrrrrr,
     });
   }
-}
-};
+},
+EnvoiMessage:async (req,res)=>{
+  try{
+      const newMessage = new Message({
+          userId:req.userId
+          ,...req.body
+      })
+   const message= await newMessage.save()
+  
+    res.json({msg:"msg envoyé ",message})
+  } catch (error) {
+      res.status(500).send("server error")
+  }
+  },
+
+
+getMessage:async (req,res)=>{
+
+try {
+      const messages=await Message.find()
+      res.json({messages})
+  } catch (error) {
+      
+  }
+},}
+

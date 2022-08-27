@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 
 
 //Require Router from express
@@ -20,4 +20,4 @@ router.post('/newMessage',isAuth,messageController.EnvoiMessage);
   //@path :http://localhost:5000/api/Messages/
 //Get all Messages
 //accés private
-router.get('/',isAuth,messageController.getMessage);
+router.get('/',isAuth,messageController.getMessage);*/

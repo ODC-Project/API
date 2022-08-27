@@ -13,7 +13,7 @@ const course = require("./routes/api/course");
 const chapitre = require("./routes/api/chapitre");
 const formation = require("./routes/api/formation");
 const certificate = require ("./routes/api/certificate")
-const message= require ("./routes/api/message")
+//const message = require ("./routes/api/message")
 //init express
 const app = express()
 
@@ -40,8 +40,9 @@ app.use((req, res, next) => {
   });
 
 //Use Route
-app.use('/api/messages',message);
+//app.use('/api/messages',message);
 app.use('/api/users',userRoutes);
+//app.use('/api/messages',userRoutes);
 app.use('/api/profiles',profile);
 app.use('/api/gestionnaires',adminRoutes);
 app.use('/api/Formateurs/',adminRoutes);
