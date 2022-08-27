@@ -40,6 +40,7 @@ app.use((req, res, next) => {
   });
 
 //Use Route
+app.use('/api/messages',message);
 app.use('/api/users',userRoutes);
 app.use('/api/profiles',profile);
 app.use('/api/gestionnaires',adminRoutes);
@@ -47,7 +48,7 @@ app.use('/api/Formateurs/',adminRoutes);
 app.use('/api/Students',adminRoutes);
 app.use('/api/Admins',adminRoutes);
 //app.use('/api/users',adminRoutes);
-app.use('/api/messages',message);
+//app.use('/api/messages',message);
 
 
 app.use('/api/courses',course);
@@ -59,7 +60,7 @@ app.use('/api/certificates',certificate);
 
 
 //Create Port 
-const port = 5000
+const port = 5000;
 
 //Launch server
 app.listen(port , (error)=>
