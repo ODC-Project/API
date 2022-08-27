@@ -20,8 +20,8 @@ router.post('/newFormation',isAuth,formationController.createFormation);
 
   //@path :http://localhost:5000/api/formations/
 //Get all formations
-//accés private
-router.get('/',isAuth,formationController.getFormation)
+//accés public
+router.get('/',formationController.getFormation)
 
  
    //@path :http://localhost:5000/api/formations/deleteFormation/:id
