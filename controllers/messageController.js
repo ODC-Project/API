@@ -1,4 +1,4 @@
-/*const Message=require("../models/Message");
+const Message=require("../models/Message");
 const jwt=require("jsonwebtoken");
 
 const User=require("../models/User");
@@ -28,4 +28,4 @@ try {
             
         }
     },
-}*/
+}

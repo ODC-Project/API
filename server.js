@@ -13,7 +13,7 @@ const course = require("./routes/api/course");
 const chapitre = require("./routes/api/chapitre");
 const formation = require("./routes/api/formation");
 const certificate = require ("./routes/api/certificate")
-//const message = require ("./routes/api/message")
+const message = require ("./routes/api/message")
 //init express
 const app = express()
 
@@ -49,7 +49,7 @@ app.use('/api/Formateurs/',adminRoutes);
 app.use('/api/Students',adminRoutes);
 app.use('/api/Admins',adminRoutes);
 //app.use('/api/users',adminRoutes);
-//app.use('/api/messages',message);
+app.use('/api/messages',message);
 
 
 app.use('/api/courses',course);

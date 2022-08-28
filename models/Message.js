@@ -7,7 +7,13 @@ const MessageShema = new mongoose.Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
       },
-      data: {
+      name: {
+        type: String, //filename
+      },
+      email: {
+        type: String, //filename
+      },
+      message: {
         type: String, //filename
       },
     
