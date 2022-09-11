@@ -33,7 +33,7 @@ const getCoursesByCategory = async (req, res) => {
 
     res.json({
       data: courses,
-      count: courses.length, // cousrses.count mich data.count
+      count: courses.length, // cousrses.count not data.count
     });
   } catch (error) {
     console.log(error);

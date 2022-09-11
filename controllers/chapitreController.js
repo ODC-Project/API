@@ -53,7 +53,7 @@ const getChapterByCourseId = async (req, res) => {
   try {
     const courseId = req.params.courseId;
 
-    const chapters = await Chapitre.find({ courseId });
+    const chapters = await Chapitre.find({ courseId }).populate("courseId");
 
     res.json({
       data: chapters,
